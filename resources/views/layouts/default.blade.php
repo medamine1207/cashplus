@@ -17,6 +17,7 @@
 	<div class="container">
 	@yield('content')
 	</div>
+	@include('flashy::message')
 	
 </body>
 </html>
