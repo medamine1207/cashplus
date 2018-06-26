@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\form_in;
 use App\models\in;
 use Illuminate\Http\Request;
 use MercurySeries\Flashy\Flashy;
@@ -37,8 +38,9 @@ class InsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(form_in $request)
     {
+        
         in::create(['montant_in'=>$request->f_montant_in,
                     'motif_in'=>$request->f_motif_in,
                     'remarque_in'=>$request->f_remarque_in    ]);

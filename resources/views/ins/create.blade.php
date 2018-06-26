@@ -1,11 +1,22 @@
 @extends('layouts.default')
 
 @section('content')
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 <form action="{{route('ins.store')}}" method="POST">
 	{{ csrf_field() }}
+
   <div class="container">
     <label for="f_montant_in">Montant </label>
     <input type="text" class="form-control" name="f_montant_in" id="f_montant_in" placeholder="saisir montant entrée">
+    
   </div>
   <div class="container">
     <label for="f_motif_in">Motif</label>
@@ -22,3 +33,4 @@
   </div> 
 </form>
 @endsection
+<span class="has-error text-danger"></span>
