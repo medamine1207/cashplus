@@ -15,17 +15,17 @@
 
   <div class="container">
     <label for="f_montant_in">Montant </label>
-    <input type="text" class="form-control" name="f_montant_in" id="f_montant_in" placeholder="saisir montant entrée">
+    <input type="text" class="form-control" name="f_montant_in" id="f_montant_in" placeholder="saisir montant entrée" value="{{old('f_montant_in')}}">
     
   </div>
   <div class="container">
     <label for="f_motif_in">Motif</label>
-    <input type="text" class="form-control" name="f_motif_in" id="f_motif_in" placeholder="saisir motif d'entrée">
+    <input type="text" class="form-control" name="f_motif_in" id="f_motif_in" placeholder="saisir motif d'entrée" value="{{old('f_motif_in')}}">
   </div>
 
   <div class="container">
     <label for="f_remarque_in">remarque</label>
-    <input type="text" class="form-control" name="f_remarque_in" id="f_remarque_in" placeholder="saisir motif d'entrée">
+    <input type="text" class="form-control" name="f_remarque_in" id="f_remarque_in" placeholder="saisir motif d'entrée" value="{{old('f_remarque_in')}}">
   </div>
 
   <div class="container" style="margin-top: 25px;">

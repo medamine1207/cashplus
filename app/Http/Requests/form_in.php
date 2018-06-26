@@ -26,7 +26,7 @@ class form_in extends FormRequest
 
         return [
            
-            'f_montant_in' => 'required',
+            'f_montant_in' => 'required|Numeric',
             'f_motif_in' => 'required',
             'f_remarque_in' => 'required'
         

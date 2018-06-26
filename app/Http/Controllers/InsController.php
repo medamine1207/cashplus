@@ -71,7 +71,8 @@ class InsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ins = in::findOrFail($id);
+        return view('ins.edit',compact('ins'));
     }
 
     /**
@@ -81,9 +82,18 @@ class InsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(form_in $request, $id)
     {
-        //
+        //dd('teste de update');
+        $updated = in::findOrFail($id);
+
+        $updated->montant_in = $request->f_montant_in;
+        $updated->motif_in = $request->f_motif_in;
+        $updated->remarque_in = $request->f_remarque_in;
+
+        $updated->save();
+        Flashy::success('entrée modifié avec succès');
+        return redirect()->route('ins.home');
     }
 
     /**
