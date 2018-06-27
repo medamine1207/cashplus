@@ -15,7 +15,18 @@
 			<a href="{{route('ins.index')}}" class="btn btn-primary" role="button" title="ajouter une nouvelle entrée">revenir</a>
 
 			<a href="{{route('ins.edit',$ins->id_in)}}" class="btn btn-primary" role="button" title="ajouter une nouvelle entrée">modifier cette entrée</a>
+
+
+			
+
 </form>
+
+			<form method="POST" action="{{route('ins.destroy',$ins->id_in)}}">
+				{{method_field('DELETE')}}
+				{{csrf_field()}}
+				<input type="submit" class="btn btn-danger" value="supprimer" name="">
+			</form>
+
 
 
 @stop

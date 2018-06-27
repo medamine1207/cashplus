@@ -22,8 +22,16 @@
     
   </div>
   <div class="container">
-    <label for="f_motif_in">Motif</label>
-    <input type="text" class="form-control" name="f_motif_in" id="f_motif_in" placeholder="saisir motif d'entrée" value="{{$ins->motif_in}}">
+    <label for="f_motif_in" class="btn-block">Motif</label>
+		   <select id="f_motif_in" name="f_motif_in" class="form-control">
+		  	
+			  <option value="service cash plus" {{old('f_motif_in')== "service cash plus" ? "selected" : ''}}>service cash plus</option>
+			  <option value="recharge mobile" {{old('f_motif_in')=="recharge mobile" ? "selected" : ''}}>recharge mobile</option>
+			  <option value="alimentation direct" {{old('f_motif_in')=="alimentation direct"? "selected" : ''}} >alimentation direct</option>
+			  <option value="autres" {{old('f_motif_in')=="autres"? "selected" : ''}} >autres</option>
+		  
+		</select>
+    
   </div>
 
   <div class="container">
@@ -33,6 +41,9 @@
 
   <div class="container" style="margin-top: 25px;">
   	<input type="submit" name="" value="modifier l'entrée" class="btn btn-success btn-block">
+  </div> 
+  <div class="container" style="margin-top: 25px;">
+  	<a href="{{route('ins.index')}}" class="btn btn-primary btn-block" role="button" title="ajouter une nouvelle entrée">revenir</a>
   </div> 
 </form>
 

@@ -18,9 +18,20 @@
     <input type="text" class="form-control" name="f_montant_in" id="f_montant_in" placeholder="saisir montant entrée" value="{{old('f_montant_in')}}">
     
   </div>
+
+ 
+
   <div class="container">
-    <label for="f_motif_in">Motif</label>
-    <input type="text" class="form-control" name="f_motif_in" id="f_motif_in" placeholder="saisir motif d'entrée" value="{{old('f_motif_in')}}">
+    <label for="f_motif_in" class="btn-block">Motif</label>
+		   <select id="f_motif_in" name="f_motif_in" value="{{old('f_motif_in')}}" placeholder="saisir motif d'entrée" class="form-control">
+		  	<option value="" selected>choisir motif</option>
+			  <option value="service cash plus">service cash plus</option>
+			  <option value="recharge mobile">recharge mobile</option>
+			  <option value="alimentation direct">alimentation direct</option>
+			  <option value="autres">autres</option>
+		  
+		</select>
+    
   </div>
 
   <div class="container">

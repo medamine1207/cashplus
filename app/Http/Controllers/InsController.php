@@ -104,6 +104,7 @@ class InsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        in::destroy($id);
+        return redirect()->route('ins.home');
     }
 }
